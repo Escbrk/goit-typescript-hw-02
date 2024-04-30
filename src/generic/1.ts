@@ -1,16 +1,12 @@
-/*
-  Є функція getPromise(), яка повертає проміс, що дозволяється в масив, що містить рядки та числа. 
-  Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
-*/
+import axios, { AxiosResponse } from "../../node_modules/axios/index";
 
-function getPromise(): Promise<(string | number)[]> {
-  return new Promise<(string | number)[]>((resolve) => {
-    resolve(["Text", 50]);
-  });
+async function fetchData<T>(url: string): Promise<T> {
+  try {
+    const response: AxiosResponse<T> = await axios.get<T>(url);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(`Error fetching from ${url}: ${error}`);
+  }
 }
-
-getPromise().then((data) => {
-  console.log(data);
-});
 
 export {};

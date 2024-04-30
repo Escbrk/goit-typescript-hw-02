@@ -1,9 +1,4 @@
-let some: unknown;
-some = "Text";
-let str: string;
-
-if (some === "string") {
-  str = some;
-}
+let union: string | number;
+let literal: "enable" | "disable";
 
 export {};

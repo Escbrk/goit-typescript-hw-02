@@ -1,18 +1,25 @@
-/*
-  Створіть функцію (isWeekend), яка приймає день тижня (з вашого enum)
-  і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
-*/
+type Page = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: object;
+};
 
-enum Days {
-  monday = "monday",
-  tuesday = "tuesday",
-  wednesday = "wednesday",
-  thursday = "wednesday",
-  friday = "friday",
-  saturday = "saturday",
-  sunday = "sunday",
-}
+const page1: Page = {
+  title: "The awesome page",
+  likes: 100,
+  accounts: ["Max", "Anton", "Nikita"],
+  status: "open",
+  details: {
+    createAt: new Date("2021-01-01"),
+    updateAt: new Date("2021-05-01"),
+  },
+};
 
-function isWeekend(day: string): boolean {
-  return day === Days.saturday || day === Days.sunday;
-}
+const page2: Page = {
+  title: "Python or Js",
+  likes: 5,
+  accounts: ["Alex"],
+  status: "close",
+};

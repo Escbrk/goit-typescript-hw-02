@@ -1,7 +1,13 @@
-/* 
-  Як ви визначите змінну в TypeScript, яка може приймати рядок або число (union type)? 
-  І так само визначте змінну, яка може приймати тільки одне з двох рядкових значень: 'enable' або 'disable' (literal type)?
-*/
+enum DayOfWeek {
+  monday = "monday",
+  tuesday = "tuesday",
+  wednesday = "wednesday",
+  thursday = "wednesday",
+  friday = "friday",
+  saturday = "saturday",
+  sunday = "sunday",
+}
 
-let union: string | number;
-let literal: "enable" | "disable";
+function isWeekend(day: string): boolean {
+  return day === DayOfWeek.saturday || day === DayOfWeek.sunday;
+}

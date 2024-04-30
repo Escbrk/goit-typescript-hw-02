@@ -1,5 +1,3 @@
-let anything: any = -20;
-anything = "Text";
-anything = {};
+let person: [string, number] = ["Max", 21];
 
 export {};

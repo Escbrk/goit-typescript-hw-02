@@ -1,8 +1,13 @@
-/*
-  Як переписати його в TypeScript, використовуючи концепцію кортежів, 
-  щоб гарантувати, що перший елемент завжди буде рядком, а другий числом?
-*/
+function showMessage(message: string): void {
+  console.log(message);
+}
 
-let person: [string, number] = ["Max", 21];
+function calc(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+function customError(): never {
+  throw new Error("Error");
+}
 
 export {};

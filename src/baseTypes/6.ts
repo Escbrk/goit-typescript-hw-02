@@ -1,17 +1,25 @@
-/*
-  Як ви вкажете типи для аргументів і значень цих функцій, що повертаються?
-*/
-
-function showMessage(message: string): void {
-  console.log(message);
+interface User {
+  name: string;
+  age: number;
+  email: string;
+  address?: {
+    city: string;
+    country: string;
+  };
 }
 
-function calc(num1: number, num2: number): number {
-  return num1 + num2;
-}
+const mango: User = {
+  name: "Mango",
+  age: 30,
+  email: "john@example.com",
+  address: {
+    city: "New York",
+    country: "USA",
+  },
+};
 
-function customError(): never {
-  throw new Error("Error");
-}
-
-export {};
+const poly: User = {
+  name: "Mango",
+  age: 30,
+  email: "john@example.com",
+};

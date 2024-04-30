@@ -1,18 +1,14 @@
-/*
-  Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
-*/
-interface Props {
-  [key: string]: any;
+type User = {
+  name: string;
+  surname: string;
+  email: string;
+  password: string;
+};
+
+function createOrUpdateUser(initialValues: Partial<User>): object {
+  return { ...initialValues };
 }
 
-class Component<T extends Props> {
-  constructor(public props: T) {}
-}
-
-class Page<T extends Props> extends Component<T> {
-  pageInfo() {
-    console.log(this.props.title);
-  }
-}
+createOrUpdateUser({ email: "user@mail.com", password: "password123" });
 
 export {};
