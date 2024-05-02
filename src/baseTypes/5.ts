@@ -8,6 +8,6 @@ enum DayOfWeek {
   sunday = "sunday",
 }
 
-function isWeekend(day: string): boolean {
+function isWeekend(day: DayOfWeek): boolean {
   return day === DayOfWeek.saturday || day === DayOfWeek.sunday;
 }
