@@ -5,7 +5,7 @@ type User = {
   password: string;
 };
 
-function createOrUpdateUser(initialValues: Partial<User>): object {
+function createOrUpdateUser(initialValues: Partial<User>): User {
   return { ...initialValues };
 }
 
